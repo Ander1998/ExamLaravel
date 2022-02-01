@@ -63,6 +63,7 @@ class aircraftController extends Controller
         $available_flight = Flight::where('id', $flight)->first;
         $reserves = reserve::all();
 
+        //reservation
         if ($flight->input('seats') <= $available_flight->available_seats) { 
             $reserves = new reserve;
 
