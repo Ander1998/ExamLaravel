@@ -47,7 +47,9 @@ class aircraftController extends Controller
     }
 
     public function delete_asignation($id) { 
-        $flightplane = flightplane::where('id', $id);
+        $flightplane = flightplane::find($id);
+
+        $flightplane->delete();
     }
 
 }
