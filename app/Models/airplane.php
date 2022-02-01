@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class airplane extends Model
 {
     use HasFactory;
+
+    public function flightplanes() {
+        return $this->hasOne(flightplane::class);
+    }
 }

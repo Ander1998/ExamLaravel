@@ -25,6 +25,7 @@ class User extends Authenticatable
         'nif',
         'date_of_birth',
         'gender',
+        'rol'
     ];
 
 
@@ -46,4 +47,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function reserves() {
+        return $this->hasMany(reserve::class);
+    }
+
 }
