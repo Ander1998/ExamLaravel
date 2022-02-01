@@ -1,7 +1,7 @@
 <h2>Assign aircraft to flight:</h2>
 
     <div class="form-group">
-        <label for="title">Flight:</label>
+        <label for="flight">Flight:</label>
         <select name="flight" class="form-control" style="width:350px">
             <option value="">--- Select Flight ---</option>
             @foreach ($flights as $flight)
@@ -10,7 +10,7 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="title">Airplane:</label>
+        <label for="airplane">Airplane:</label>
         <select name="airplane" class="form-control" style="width:350px">
             <option value="">--- Select Airplane ---</option>
             @foreach ($airplanes as $airplane)

@@ -64,7 +64,7 @@
           <div class="links">
               <a href="{{ route('/admin') }}">@lang('messages.administration')</a>
               <a href="{{ route('/asign_aircraft') }}">@lang('messages.flight_plane')</a>
-              <a href="/">@lang('messages.future_flights')</a>
+              <a href="{{ route('/pending_fligths') }}">@lang('messages.future_flights')</a>
               <a href="/">@lang('messages.middleware')</a>
           </div>
           <hr><br><br>

@@ -23,9 +23,13 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/admin', [App\Http\Controllers\LoginController::class, 'login'])->name('admin');
 
-Route::get('/asign_aircraft', [App\Http\Controllers\AircraftController::class, 'asign_aircraft'])->name('asign_aircraft');
+Route::get('/asign_aircraft', [App\Http\Controllers\aircraftController::class, 'asign_aircraft'])->name('asign_aircraft');
 
-Route::post('addairplane', [App\Http\Controllers\AirplaneController::class, 'addairplane'])->name('addairplane');
+Route::get('/pending_fligths', [App\Http\Controllers\aircraftController::class, 'pending_fligths'])->name('pending_fligths');
 
-Route::post('delete_asignation/{reserve->id}', [App\Http\Controllers\AirplaneController::class, 'delete_asignation'])->name('delete_asignation');
+Route::post('addairplane', [App\Http\Controllers\aircraftController::class, 'addairplane'])->name('addairplane');
+
+Route::post('delete_asignation/{reserve->id}', [App\Http\Controllers\aircraftController::class, 'delete_asignation'])->name('delete_asignation');
+
+Route::post('reserve_flight', [App\Http\Controllers\aircraftController::class, 'reserve_flight'])->name('reserve_flight');
 
